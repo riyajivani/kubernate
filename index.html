@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>hello there!!</div>
+</body>
+</html>
+
+
+<!-- PS F:\try> docker build -t changatutorial  
+"docker build" requires exactly 1 argument.
+See 'docker build --help'.
+
+Usage:  docker build [OPTIONS] PATH | URL | -
+
+Build an image from a Dockerfile
+PS F:\try> docker build -t changatutorial .
+[+] Building 9.1s (8/8) FINISHED
+ => [internal] load build definition from Dockerfile                                                                                                                                                                        0.1s 
+ => => transferring dockerfile: 137B                                                                                                                                                                                        0.0s 
+ => [internal] load .dockerignore                                                                                                                                                                                           0.0s 
+ => => transferring context: 2B                                                                                                                                                                                             0.0s 
+ => [internal] load metadata for docker.io/library/nginx:alpine                                                                                                                                                             3.8s 
+ => [auth] library/nginx:pull token for registry-1.docker.io                                                                                                                                                                0.0s 
+ => [internal] load build context                                                                                                                                                                                           0.0s 
+ => => transferring context: 417B                                                                                                                                                                                           0.0s 
+ => [1/2] FROM docker.io/library/nginx:alpine@sha256:69f8c2c72671490607f52122be2af27d4fc09657ff57e42045801aa93d2090f7                                                                                                       5.1s 
+ => => resolve docker.io/library/nginx:alpine@sha256:69f8c2c72671490607f52122be2af27d4fc09657ff57e42045801aa93d2090f7                                                                                                       0.0s 
+ => => sha256:b1e69ebc7f924a03f4e1d3906db5423920d8b40d8f315db72445e6a7041c6237 3.99MB / 3.99MB                                                                                                                              2.2s 
+ => => sha256:628158b45bceaf19d9e86fbfb08c925d75e1e2ab888cd9b97b7c8a8181232be4 628B / 628B                                                                                                                                  0.8s 
+ => => sha256:69f8c2c72671490607f52122be2af27d4fc09657ff57e42045801aa93d2090f7 9.07kB / 9.07kB                                                                                                                              0.0s 
+ => => sha256:059cdcc5de66cd4e588b5f416b98a7af82e75413e2bf275f1e673c5d7d4b1afa 2.50kB / 2.50kB                                                                                                                              0.0s 
+ => => sha256:70ea0d8cc5300acde42073a2fbc0d28964ddb6e3c31263d92589c2320c3ccba4 10.99kB / 10.99kB                                                                                                                            0.0s 
+ => => sha256:4abcf20661432fb2d719aaf90656f55c287f8ca915dc1c92ec14ff61e67fbaf8 3.41MB / 3.41MB                                                                                                                              1.6s 
+ => => sha256:346e52e95fa0a52e495913d9d99e4766d1164631ddbf3a79b1b7860c44a4582a 957B / 957B                                                                                                                                  1.3s 
+ => => sha256:8c57fb1cd6448c27acb916942fed2522079e5256bc92466c1351f1b6d5f201e9 396B / 396B                                                                                                                                  1.7s 
+ => => extracting sha256:4abcf20661432fb2d719aaf90656f55c287f8ca915dc1c92ec14ff61e67fbaf8                                                                                                                                   0.1s 
+ => => sha256:e3227d68030df2f1c6db2654cf30f1e42d5700dc7b5c73eb1a4585bbd588affa 1.40kB / 1.40kB                                                                                                                              2.0s 
+ => => sha256:dc3800d1d0f27990204f4c7f60ef0a8fdbf41a3199d38467475aba551823ccd4 1.21kB / 1.21kB                                                                                                                              1.9s 
+ => => sha256:8c50e1264d11b6f97944fb962f743063fbe75e06535780bb4919d491cf9ccde4 13.04MB / 13.04MB                                                                                                                            4.7s
+ => => extracting sha256:b1e69ebc7f924a03f4e1d3906db5423920d8b40d8f315db72445e6a7041c6237                                                                                                                                   0.1s
+ => => extracting sha256:628158b45bceaf19d9e86fbfb08c925d75e1e2ab888cd9b97b7c8a8181232be4                                                                                                                                   0.0s
+ => => extracting sha256:346e52e95fa0a52e495913d9d99e4766d1164631ddbf3a79b1b7860c44a4582a                                                                                                                                   0.0s
+ => => extracting sha256:8c57fb1cd6448c27acb916942fed2522079e5256bc92466c1351f1b6d5f201e9                                                                                                                                   0.0s
+ => => extracting sha256:dc3800d1d0f27990204f4c7f60ef0a8fdbf41a3199d38467475aba551823ccd4                                                                                                                                   0.0s
+ => => extracting sha256:e3227d68030df2f1c6db2654cf30f1e42d5700dc7b5c73eb1a4585bbd588affa                                                                                                                                   0.0s 
+ => => extracting sha256:8c50e1264d11b6f97944fb962f743063fbe75e06535780bb4919d491cf9ccde4                                                                                                                                   0.2s 
+ => [2/2] COPY . /usr/share/nginx/html                                                                                                                                                                                      0.1s 
+ => exporting to image                                                                                                                                                                                                      0.0s 
+ => => exporting layers                                                                                                                                                                                                     0.0s 
+ => => writing image sha256:50355b4586b780619c2295d0e0e5c589351ba55404c54a1f61cbf3279a32943d                                                                                                                                0.0s 
+ => => naming to docker.io/library/changatutorial                                                                                                                                                                           0.0s 
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+PS F:\try> docker images
+REPOSITORY                    TAG       IMAGE ID       CREATED              SIZE
+changatutorial                latest    50355b4586b7   About a minute ago   48.3MB
+gcr.io/k8s-minikube/kicbase   v0.0.44   5a6e59a9bdc0   6 weeks ago          1.26GB
+docker/getting-started        latest    3e4394f6b72f   18 months ago        47MB
+PS F:\try> docker run -d --name changatutorial -p 8080:80 
+"docker run" requires at least 1 argument.
+See 'docker run --help'.
+
+Usage:  docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+
+Run a command in a new container
+PS F:\try> docker run -d --name changatutoria-1l -p 8080:80 
+"docker run" requires at least 1 argument.
+Run a command in a new container
+PS F:\try> docker run -d --name changatutoria-1l -p 8080:80 changatutorial
+99bdffeb963c40b8c8f310bd24cb3c1c232c8f7928d6b73c5bb9395bcbdc4b54
+docker: Error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:8080 -> 0.0.0.0:0: listen tcp 0.0.0.0:8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+PS F:\try> docker run -d --name changatutoria-1l -p 8080:80 changatutorial
+99bdffeb963c40b8c8f310bd24cb3c1c232c8f7928d6b73c5bb9395bcbdc4b54
+docker: Error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:8080 -> 0.0.0.0:0: listen tcp 0.0.0.0:8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+PS F:\try> docker run -d --name changatutoria-1l -p 8081:80 changatutorial
+docker: Error response from daemon: Conflict. The container name "/changatutoria-1l" is already in use by container "99bdffeb963c40b8c8f310bd24cb3c1c232c8f7928d6b73c5bb9395bcbdc4b54". You have to remove (or rename) that container to be able to reuse that name.
+See 'docker run --help'.
+PS F:\try> docker run -d --name changatutoria-1l -p 8081:80 changatutorial
+dd194d3770154afc317d631c8398779fb61eef72050f8acc30d6110557d0d843
+PS F:\try> docker ps
+CONTAINER ID   IMAGE                                 COMMAND                  CREATED          STATUS          PORTS                                                                                                                                  NAMES
+dd194d377015   changatutorial                        "/docker-entrypoint.…"   18 seconds ago   Up 17 seconds   0.0.0.0:8081->80/tcp                                                                                                                   changatutoria-1l
+04d63a9f65c4   gcr.io/k8s-minikube/kicbase:v0.0.44   "/usr/local/bin/entr…"   27 minutes ago   Up 27 minutes   127.0.0.1:56959->22/tcp, 127.0.0.1:56955->2376/tcp, 127.0.0.1:56957->5000/tcp, 127.0.0.1:56958->8443/tcp, 127.0.0.1:56956->32443/tcp   minikube
+PS F:\try> docker ps all
+"docker ps" accepts no arguments.
+See 'docker ps --help'.
+
+Usage:  docker ps [OPTIONS]
+
+List containers
+PS F:\try> docker build -t riyajivani/changatutorial .      
+[+] Building 2.0s (8/8) FINISHED                                                                                                                                                                                          
+ => [internal] load build definition from Dockerfile                                                                                                                                                                 0.0s
+ => => transferring dockerfile: 31B                                                                                                                                                                                  0.0s 
+ => [internal] load .dockerignore                                                                                                                                                                                    0.0s 
+ => => transferring context: 2B                                                                                                                                                                                      0.0s 
+ => [internal] load metadata for docker.io/library/nginx:alpine                                                                                                                                                      1.9s 
+ => [auth] library/nginx:pull token for registry-1.docker.io                                                                                                                                                         0.0s
+ => [internal] load build context                                                                                                                                                                                    0.0s
+ => => transferring context: 61B                                                                                                                                                                                     0.0s 
+ => [1/2] FROM docker.io/library/nginx:alpine@sha256:69f8c2c72671490607f52122be2af27d4fc09657ff57e42045801aa93d2090f7                                                                                                0.0s 
+ => CACHED [2/2] COPY . /usr/share/nginx/html                                                                                                                                                                        0.0s 
+ => exporting to image                                                                                                                                                                                               0.0s 
+ => => exporting layers                                                                                                                                                                                              0.0s 
+ => => writing image sha256:50355b4586b780619c2295d0e0e5c589351ba55404c54a1f61cbf3279a32943d                                                                                                                         0.0s 
+ => => naming to docker.io/riyajivani/changatutorial                                                                                                                                                                 0.0s 
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+PS F:\try> docker run -d --name riyajivani/changatutoria-1 -p 8081:80 riyajivani/changatutorial 
+docker: Error response from daemon: Invalid container name (riyajivani/changatutoria-1), only [a-zA-Z0-9][a-zA-Z0-9_.-] are allowed.
+See 'docker run --help'.
+PS F:\try> docker run -d --name riyajivani/changatutoria-1 -p 8081:80 changatutorial           
+Unable to find image 'changatutorial:latest' locally
+docker: Error response from daemon: pull access denied for changatutorial, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+PS F:\try> docker run -d --name riyajivani/changatutoria-1 -p 8081:80               
+"docker run" requires at least 1 argument.
+See 'docker run --help'.
+
+Usage:  docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+
+Run a command in a new container
+PS F:\try> docker build -t riyajivani/changatutorial .
+[+] Building 1.0s (7/7) FINISHED
+ => [internal] load build definition from Dockerfile                                                                                                                                                                 0.0s
+ => => transferring dockerfile: 31B                                                                                                                                                                                  0.0s 
+ => [internal] load .dockerignore                                                                                                                                                                                    0.0s 
+ => => transferring context: 2B                                                                                                                                                                                      0.0s 
+ => [internal] load metadata for docker.io/library/nginx:alpine                                                                                                                                                      0.9s 
+ => [internal] load build context                                                                                                                                                                                    0.0s
+ => => transferring context: 61B                                                                                                                                                                                     0.0s 
+ => [1/2] FROM docker.io/library/nginx:alpine@sha256:69f8c2c72671490607f52122be2af27d4fc09657ff57e42045801aa93d2090f7                                                                                                0.0s 
+ => CACHED [2/2] COPY . /usr/share/nginx/html                                                                                                                                                                        0.0s 
+ => exporting to image                                                                                                                                                                                               0.0s 
+ => => exporting layers                                                                                                                                                                                              0.0s 
+ => => writing image sha256:50355b4586b780619c2295d0e0e5c589351ba55404c54a1f61cbf3279a32943d                                                                                                                         0.0s 
+ => => naming to docker.io/riyajivani/changatutorial                                                                                                                                                                 0.0s 
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+PS F:\try> docker run -d -p 8081:80 riyajivani/changatutorial        
+90f0936209fa39addd0eb8217b06625568d1b6161000c7bf0540ad5158323d60
+PS F:\try> docker ps
+CONTAINER ID   IMAGE                                 COMMAND                  CREATED          STATUS          PORTS                                                                                                      
+                            NAMES
+90f0936209fa   riyajivani/changatutorial             "/docker-entrypoint.…"   22 seconds ago   Up 21 seconds   0.0.0.0:8081->80/tcp                                                                                       
+                            beautiful_bohr
+04d63a9f65c4   gcr.io/k8s-minikube/kicbase:v0.0.44   "/usr/local/bin/entr…"   53 minutes ago   Up 52 minutes   127.0.0.1:56959->22/tcp, 127.0.0.1:56955->2376/tcp, 127.0.0.1:56957->5000/tcp, 127.0.0.1:56958->8443/tcp, 127.0.0.1:56956->32443/tcp   minikube
+PS F:\try> docker login
+Authenticating with existing credentials...
+Login Succeeded
+
+Logging in with your password grants your terminal complete access to your account.
+For better security, log in with a limited-privilege personal access token. Learn more at https://docs.docker.com/go/access-tokens/
+PS F:\try> docker push riyajivani/changatutorial
+Using default tag: latest
+The push refers to repository [docker.io/riyajivani/changatutorial]
+293fdc404168: Pushed
+9cba8117003a: Mounted from library/nginx
+b6d04dc5ecf7: Mounted from library/nginx
+d38ed9b519d2: Mounted from library/nginx
+3b4115e2edd1: Mounted from library/nginx
+8d720e2faad3: Mounted from library/nginx
+7b87df18a0ed: Mounted from library/nginx
+a05d3326ce5a: Mounted from library/nginx
+d4fc045c9e3a: Mounted from library/nginx
+latest: digest: sha256:19fe0b2284cfb0afb122478e7007ff66893ad8e37d3a7cf4a459ba2f820eeaf3 size: 2196
+PS F:\try>
+
+CMD
+
+Microsoft Windows [Version 10.0.22621.3737]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Student>minikub start
+'minikub' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Student>minikube start
+* minikube v1.33.1 on Microsoft Windows 11 Education 10.0.22621.3737 Build 22621.3737
+* Automatically selected the docker driver. Other choices: virtualbox, ssh
+* Using Docker Desktop driver with root privileges
+* Starting "minikube" primary control-plane node in "minikube" cluster
+* Pulling base image v0.0.44 ...
+* Downloading Kubernetes v1.30.0 preload ...
+    > preloaded-images-k8s-v18-v1...:  342.90 MiB / 342.90 MiB  100.00% 351.77
+    > gcr.io/k8s-minikube/kicbase...:  481.58 MiB / 481.58 MiB  100.00% 428.22
+* Creating docker container (CPUs=2, Memory=4000MB) ...
+* Preparing Kubernetes v1.30.0 on Docker 26.1.1 ...
+  - Generating certificates and keys ...
+  - Booting up control plane ...
+  - Configuring RBAC rules ...
+* Configuring bridge CNI (Container Networking Interface) ...
+* Verifying Kubernetes components...
+  - Using image gcr.io/k8s-minikube/storage-provisioner:v5
+* Enabled addons: storage-provisioner, default-storageclass
+* Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
+
+C:\Users\Student> kubectl run ddu-pod --image=riyajivani/changatutorial
+pod/ddu-pod created
+
+C:\Users\Student>kubectl get pods
+NAME      READY   STATUS    RESTARTS   AGE
+ddu-pod   1/1     Running   0          2m40s
+
+C:\Users\Student>kubectl expose pod my-nginx --type=NodePort --port=80
+Error from server (NotFound): pods "my-nginx" not found
+
+C:\Users\Student>kubectl expose pod my-nginx --type=NodePort --port=80
+Error from server (NotFound): pods "my-nginx" not found
+
+C:\Users\Student>kubectl expose pod my-nginx --type=NodePort --port=80
+Error from server (NotFound): pods "my-nginx" not found
+
+C:\Users\Student>kubectl expose pod my-nginx --type=NodePort --port=80
+Error from server (NotFound): pods "my-nginx" not found
+
+C:\Users\Student>kubectl expose pod my-nginx --type=NodePort --port=80
+Error from server (NotFound): pods "my-nginx" not found
+
+C:\Users\Student>kubectl expose pod my-nginx --type=NodePort --port=80
+Error from server (NotFound): pods "my-nginx" not found
+
+C:\Users\Student>kubectl expose ddu-pod --type=NodePort --port=80 --name=myweb-service
+error: the server doesn't have a resource type "ddu-pod"
+
+C:\Users\Student>kubectl expose ddu-pod \--type=NodePort --port=80 --name=myweb-service
+error: the server doesn't have a resource type "ddu-pod"
+
+C:\Users\Student>kubectl expose ddu-pod --type=NodePort --port=80 --name=myweb-service
+error: the server doesn't have a resource type "ddu-pod"
+
+C:\Users\Student>kubectl expose pod ddu-pod --type=NodePort --port=80 --name=myweb-service
+service/myweb-service exposed
+
+C:\Users\Student>get svc
+'get' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Student>kubectl get svc
+NAME            TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+kubernetes      ClusterIP   10.96.0.1        <none>        443/TCP        78m
+myweb-service   NodePort    10.105.140.221   <none>        80:30853/TCP   2m21s
+
+C:\Users\Student>minikube tunnel
+* Tunnel successfully started
+
+* NOTE: Please do not close this terminal as this process must stay alive for the tunnel to be accessible ...
+
+
+C:\Users\Student>kubectl get svc
+NAME            TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+kubernetes      ClusterIP   10.96.0.1        <none>        443/TCP        83m
+myweb-service   NodePort    10.105.140.221   <none>        80:30853/TCP   7m43s
+
+C:\Users\Student>minikube tunnel
+* Tunnel successfully started
+
+* NOTE: Please do not close this terminal as this process must stay alive for the tunnel to be accessible ...
+
+
+C:\Users\Student>minikube ip
+192.168.49.2
+
+C:\Users\Student>
+-->
